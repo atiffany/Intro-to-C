@@ -22,7 +22,13 @@ void swap(int* a, int* b)
 */
 int string_length(char *s)
 {
-
+    int counter = 0;
+    while (*s != '\0')
+    {
+        counter++;
+        s++;
+    }
+    return counter;
 }
 
 /*
@@ -33,7 +39,13 @@ int string_length(char *s)
 */
 void string_copy(char *x, char *y)
 {
-
+    int index = 0;
+    while (y[index] != '\0')
+    {
+        x[index] = y[index];
+        index++;
+    }
+    x[index] = '\0';
 }
 
 /* 
@@ -50,7 +62,7 @@ void string_copy(char *x, char *y)
 */
 int string_compare(char *m, char *n)
 {
-
+    printf(m, n);
 }
 
 #ifndef TESTING
