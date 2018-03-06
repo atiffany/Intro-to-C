@@ -62,7 +62,21 @@ void string_copy(char *x, char *y)
 */
 int string_compare(char *m, char *n)
 {
-    printf(m, n);
+    int flag = 0;
+    for (int i = 0; m[i] != '\0' && n[i] != '\0'; i++)
+    {
+        if (m > n)
+        {
+            flag--;
+            i = string_length(m)-1;
+        }
+        if (n > m)
+        {
+            flag++;
+            i = string_length(m)-1;
+        }
+    }
+    return flag;
 }
 
 #ifndef TESTING
